@@ -2,7 +2,7 @@ porog = int(input())
 n = int(input())
 error = 0
 prev = 0
-maxim = 0.0
+maxim = -10 ** 19
 sred = 0.0
 for i in range(n):
     x = input()
@@ -17,5 +17,5 @@ for i in range(n):
 print(f'{n}')
 print(f'{error}')
 print(f'{prev}')
-print(f'{maxim}')
+print(f'{maxim:.1f}')
 print(f'{(sred/(n-error)):.1f}')
