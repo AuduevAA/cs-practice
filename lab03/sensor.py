@@ -8,10 +8,14 @@ for i in range(n):
     x = input()
     if x == 'error':
         error += 1
-    if x != 'error':
+    else:
         sred += float(x)
     if x != 'error' and float(x) > porog:
-        porog += 1
+        prev += 1
     if x != 'error' and float(x) > maxim:
         maxim = float(x)
-print(n, error, prev, maxim, (sred/(n-error)))
+print(f'{n}')
+print(f'{error}')
+print(f'{prev}')
+print(f'{maxim}')
+print(f'{(sred/(n-error)):.1f}')
