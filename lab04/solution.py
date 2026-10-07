@@ -6,3 +6,7 @@ def winner(names, scores):
 
 def average(scores) -> float:
     return round(mean(scores), 2)
+
+def ranking(names, scores):
+    sorted_p = sorted(zip(names, scores), key=lambda x: x[1], reverse=True)
+    return [pair[0] for pair in sorted_p]
