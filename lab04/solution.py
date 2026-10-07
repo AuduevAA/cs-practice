@@ -14,3 +14,8 @@ def ranking(names, scores):
 def above_average(names, scores):
     avg = average(scores)
     return [name for name, score in zip(names, scores) if score > avg]
+
+if __name__ == '__main__':
+    names =  ["Аня", "Боря", "Вика"]
+    scores = [7.0,   9.0,    9.0]
+    print(winner(names, scores), average(scores), ranking(names, scores), above_average(names, scores))
