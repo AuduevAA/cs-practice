@@ -5,6 +5,8 @@ def winner(names, scores):
     return best[0]
 
 def average(scores) -> float:
+    if not average:
+        return 0.0
     return round(mean(scores), 2)
 
 def ranking(names, scores):
