@@ -22,3 +22,21 @@ def count_types(rows):
         if kind is None:
             counts[kind] = counts.get(kind, 0) + 1
     return counts
+
+def total_minutes(rows, kind):
+    total = 0.0
+    for row in rows:
+        if row.get('тип') == kind:
+            val = row.get("минуты"," ")
+            try:
+                total += float(val.replace(',', '.'))
+            except ValueError:
+                continue
+    return round(total, 1)
+
+def to_csv(counts):
+
+    lines = ["тип, количество/n"]
+    for kind in sorted(counts.key()):
+        lines.append(f"{kind}, {counts[kind]}/n")
+    return "".join(lines)
